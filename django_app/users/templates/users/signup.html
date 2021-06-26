@@ -8,8 +8,8 @@
 {% block bootstrap5_content %}
   <div class="container">
     {% bootstrap_messages %}
-    <h2>{% translate 'Sign Up' %}</h2>
-    <a href="{% url 'login' %}">{% translate ' Back to log in' %}</a>
+    <h3 class="mt-5">Регистрация нового пользователя</h3>
+    <a href="{% url 'login' %}">Вернуться назад</a>
     <form method="post">
       {% csrf_token %}
       {% bootstrap_form form %}

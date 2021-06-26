@@ -8,29 +8,62 @@
 {% block bootstrap5_content %}
   <div class="container">
     {% bootstrap_messages %}
-    <h2>{% translate 'Home' %}</h2>
-    <ul class="nav nav-pills">
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">home</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Профиль пользователя
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{% url 'profile' %}">Профиль пользователя</a></li>
-            <li><a class="dropdown-item" href="{% url 'password_change' %}">Сменить пароль</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{% url 'logout' %}">Выход из профиля</a></li>
-          </ul>
-        </li>
+
+    <!-- Не знаю как это обновлять из джанги -->
+    <div class="py-3 d-flex flex-row justify-content-center align-items-center">
+      <div class="p-1"><b>Ваши финансы</b></div>
+      <div class="p-1">За</div>
+      <div class="p-1">
+          <select class="form-control" id="staticCategory">
+              <option>Сегодня</option>
+              <option>Эту неделю</option>
+              <option>Этот месяц</option>
+              <option>За всё время</option>
+          </select>
+      </div>
+  </div>
+
+  <div class="d-flex flex-row justify-content-center align-items-center">
+    <div class="border-start border-end px-1">
+        <p>Доходы</p>
+        <p class="text-success"><b>35 000 ₽</b></p>
+    </div>
+    <div class="border-end px-1">
+        <p>Расходы</p>
+        <p class="text-danger"><b>2 500 ₽</b></p>
+    </div>
+    <div class="border-end px-1">
+        <p>Баланс за период</p>
+        <p class="text-dark"><b>+ 32 500 ₽</b></p>
+    </div>
+</div>
+
+<div class="d-flex flex-row justify-content-center align-items-center my-3">
+  <a class="mx-1 btn btn-outline-success" href="{% url 'income' %}">Добавить доход</a>
+  <a class="mx-1 btn btn-outline-danger" href="{% url 'consumption' %}">Добавить расход</a>  
+</div>
+
+<div class="row">
+    
+  <p class="mb-0 mt-1 text-center">
+      <a class="col-8 text-primary align-center" href="{% url 'operations' %}">Все операции</a>
+  </p>
+
+  <p class="mb-0 mt-1 text-center">
+      <a class="col-8 text-primary align-center" href="{% url 'fixed_bill' %}">Постоянные траты</a>  
+  </p>
+
+  <div class="dropdown mb-0 mt-1 text-center">
+    <button class="btn dropdown-toggle text-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Профиль пользователя
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="{% url 'profile' %}">Профиль пользователя</a></li>
+      <li><a class="dropdown-item" href="{% url 'password_change' %}">Сменить пароль</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="{% url 'logout' %}">Выход из профиля</a></li>
     </ul>
-    <p>Тут будет основная страница</p>
+  </div>
+
   </div>
 {% endblock %}

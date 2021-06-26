@@ -8,16 +8,27 @@
 {% block bootstrap5_content %}
   <div class="container">
     {% bootstrap_messages %}
-    <h2>{% translate 'Login' %}</h2>
+    <div class="col-12">
+      
+    </div>
+    <h3 class="mt-5">Добро пожаловать на сайт</h3>
     <form method="post">
       {% csrf_token %}
       {% bootstrap_form form %}
 
-      {% bootstrap_button button_type="submit" content="OK" %}
-      {% bootstrap_button button_type="reset" content="Cancel" %}
+      {% bootstrap_button button_type="submit" content="Войти" %}
+      {% bootstrap_button button_type="reset" content="Отменить" %}
     </form>
-    <a href="{% url 'signup' %}">{% translate 'Sign up' %}</a>
-    <br>
-    <a href="{% url 'password_reset' %}">{% translate 'Forgotten your password?' %}</a>
+
+    <div class="row">
+      <div class="col-12 mt-1 p-0">
+        <a href="{% url 'signup' %}" class="link-info btn">Регистрация нового пользователя</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mt-1 p-0">
+        <a href="{% url 'password_reset' %}" class="link-info btn">Забыли пароль?</a>
+      </div>
+    </div>
   </div>
 {% endblock %}

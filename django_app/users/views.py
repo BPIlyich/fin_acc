@@ -5,8 +5,34 @@ from django.views.generic.edit import CreateView
 from django.utils.translation import gettext_lazy as _
 from django.utils.decorators import method_decorator
 from django.urls import reverse_lazy
-
+from django.shortcuts import render
 from .forms import UserRegisterForm
+
+
+def income_view(request):
+    """
+    View для добавления дохода
+    """
+    return render(request, 'users/income.html')
+
+def consumption_view(request):
+    """
+    View для добавления расхода
+    """
+    return render(request, 'users/consumption.html')
+
+def all_operations_view(request):
+    """
+    View для отображения всех операций
+    """
+    return render(request, 'users/operations.html')
+
+def fixed_bill_view(request):
+    """
+    View для отображения постоянных трат
+    """
+    return render(request, 'users/fixed_bill.html')
+
 
 
 class SignUpView(SuccessMessageMixin, CreateView):
@@ -31,3 +57,5 @@ class ProfileView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['user'] = self.request.user
         return context
+
+

@@ -1,0 +1,104 @@
+{% extends 'django_bootstrap5/bootstrap5.html' %}
+
+
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+
+
+{% block bootstrap5_title %}{% translate 'Home' %}{% endblock %}
+
+{% block bootstrap5_content %}
+  <div class="container">
+    {% bootstrap_messages %}
+    <div class="row">
+      <div class="col-12">
+        <h3 class="my-5">Ваши операции</h3>
+        <a href="{% url 'home' %}">Вернуться назад</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <form>      
+        {% csrf_token %}       
+        <div class="form-group row mt-3">
+          <label for="staticDateFrom" class="col-1 col-form-label">С</label>
+          <div class="col-4">
+            <input type="date" class="form-control" id="staticDateFrom">
+          </div>
+        </div>
+        
+        <div class="form-group row mt-3">
+          <label for="staticDateUntil" class="col-1 col-form-label">По</label>
+          <div class="col-4">
+            <input type="date" class="form-control" id="staticDateUntil">
+          </div>
+        </div>
+
+        <div class="form-group row mt-3">
+          <label class="col-1">Для</label>
+      
+          <div class="col-4">
+            <select multiple="multiple">
+              <optgroup label="Доход">
+                <option>Зарплата №1</option>
+                <option>Зарплата №2</option>
+                <option>Возврат долга</option>
+                <option>Без категории</option>
+                <option>Подработка</option>
+                <option>Приятные находки</option>
+                <option>Инвестиции</option>
+              </optgroup>
+              <optgroup label="Расход">
+                <option>Дом</option>
+                <option>Кредит</option>
+                <option>Продукты питания</option>
+                <option>Еда вне дома</option>
+                <option>Одежда и обувь</option>
+                <option>Развлечения</option>
+                <option>Другое</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        {% bootstrap_button button_type="submit" content="Обновить" %}
+        {% bootstrap_button button_type="reset" content="Отменить" %}
+      </form>
+    </div>
+
+  <div class="row">
+    <table class="table table-bordered border-dark mt-5">
+        <thead>
+          <tr>
+            <th scope="col">Дата</th>
+            <th scope="col">Пользователь</th>
+            <th scope="col">Сумма</th>
+            <th scope="col">Группа</th>
+            <th scope="col">Комментарий</th>
+            <th scope="col">Чек</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-success">
+            <th scope="row">15.06.2021</th>
+            <td>Илья</td>
+            <td>+10 000</td>
+            <td>Зарплата №1</td>
+            <td></td>
+            <td></td>
+            <td class="text-center">
+              <a href="#">Изменить</a>
+              <br/>
+              <a href="#">Удалить</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+    
+  </div>
+
+{% endblock %}
+</script>

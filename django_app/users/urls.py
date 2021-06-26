@@ -1,7 +1,7 @@
 from django.urls import path
 from django.contrib.auth import views
 
-from .views import SignUpView, ProfileView
+from .views import SignUpView, ProfileView, income_view, consumption_view, all_operations_view, fixed_bill_view
 
 
 urlpatterns = [
@@ -33,4 +33,9 @@ urlpatterns = [
     path('reset/done/', views.PasswordResetCompleteView.as_view(
         template_name='users/password_reset_complete.html'
     ), name='password_reset_complete'),
+
+    path('income/', income_view, name='income'),
+    path('consumption/', consumption_view, name='consumption'),
+    path('operations/', all_operations_view, name='operations'),
+    path('fixed_bill/', fixed_bill_view, name='fixed_bill')
 ]
