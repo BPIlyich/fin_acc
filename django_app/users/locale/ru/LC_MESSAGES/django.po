@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-01 18:00+0400\n"
+"POT-Creation-Date: 2021-07-02 12:00+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,18 +105,17 @@ msgid "Forgotten your password?"
 msgstr "Забыли пароль?"
 
 #: django_app/users/templates/users/login.html:34
-#: django_app/users/templates/users/password_change_form.html:10
+#: django_app/users/templates/users/password_change_form.html:19
 #: django_app/users/templates/users/signup.html:32
 msgid "OK"
 msgstr "OK"
 
 #: django_app/users/templates/users/login.html:35
-#: django_app/users/templates/users/password_change_form.html:11
-#: django_app/users/templates/users/signup.html:33
+#: django_app/users/templates/users/password_change_form.html:20
 msgid "Cancel"
 msgstr "Отмена"
 
-#: django_app/users/templates/users/password_change_done.html:6
+#: django_app/users/templates/users/password_change_done.html:9
 msgid "Your password was changed."
 msgstr "Ваш пароль изменен."
 
@@ -234,21 +233,25 @@ msgstr ""
 msgid "Reset my password"
 msgstr "Сбросить мой пароль"
 
-#: django_app/users/templates/users/profile.html:6
+#: django_app/users/templates/users/profile.html:9
 msgid "Surname"
 msgstr "Фамилия"
 
-#: django_app/users/templates/users/profile.html:7
-msgid "Patronymic"
-msgstr "Отчество"
-
-#: django_app/users/templates/users/profile.html:8
+#: django_app/users/templates/users/profile.html:10
 msgid "Name"
 msgstr "Имя"
+
+#: django_app/users/templates/users/profile.html:11
+msgid "Patronymic"
+msgstr "Отчество"
 
 #: django_app/users/templates/users/signup.html:18
 msgid "Sign Up"
 msgstr "Регистрация"
+
+#: django_app/users/templates/users/signup.html:33
+msgid "Clear"
+msgstr ""
 
 #: django_app/users/urls.py:13
 msgid "Main page"

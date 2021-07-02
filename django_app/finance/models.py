@@ -162,7 +162,12 @@ class Transaction(models.Model):
     datetime = models.DateTimeField(
         _('date and time'),
         default=timezone.now,
-        validators=(MaxValueValidator(timezone.now),)
+        validators=(
+            MaxValueValidator(
+                timezone.now,
+                _('Value cannot be greater than the current time')
+            ),
+        )
     )
     comment = models.TextField(_('comment'), blank=True)
     receipt = models.ImageField(
