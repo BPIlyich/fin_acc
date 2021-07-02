@@ -6,6 +6,7 @@
 - [Чек лист](https://docs.google.com/spreadsheets/d/1G-8lHKCwYIZhkXT9PRRuy_p3V3uLeQa1MUd_bRwTdGM/)
 - [Отчет о тестировании](https://docs.google.com/document/d/14XyGG1qOv1P9lXa-AyVrYmBnpTed6DN9aFHdSKjMEvE/)
 - [Приложение к отчету о тестировании](https://docs.google.com/document/d/1lrDWGvBjzV41e0JsdDUpoELavagpmItEo15sChCqtzA/)
+- [Документы PM](https://yadi.sk/d/ChnjbA7s_oMZXA/)
 
 ## Основные возможности:
 - Возможность добавления, удаления, редактирования записей пользователем о доходах и расходов
